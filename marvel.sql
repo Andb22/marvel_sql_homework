@@ -50,7 +50,6 @@ INSERT INTO movies (title, year, show_time) VALUES ('Spider-Man: Homecoming', 20
 INSERT INTO movies (title, year, show_time) VALUES ('Thor: Ragnarok', 2017, '22:10');
 INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '21:00');
 
-UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
 
 -- Return ALL the data in the ‘movies’ table.
 -- SELECT * FROM movies;
@@ -59,6 +58,8 @@ UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
 -- SELECT name FROM people;
 
 -- Oops! Someone spelled Krusty The Clown’s name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
+-- UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
+-- SELECT * FROM people;
 
 -- Return ONLY Homer Simpson’s name from the ‘people’ table.
 -- SELECT * FROM people WHERE name = 'Homer Simpson';
@@ -68,11 +69,23 @@ UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
 -- SELECT * FROM movies;
 
 -- We forgot one of the main characters! Add Bart Simpson to the ‘people’ table
-INSERT INTO people (name) VALUES ('Bart Simpson');
-SELECT * FROM people;
+-- INSERT INTO people (name) VALUES ('Bart Simpson');
+-- SELECT * FROM people;
 
 -- Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
+-- DELETE FROM people WHERE name = 'Eric Cartman';
+-- SELECT * FROM people;
+
 -- The cinema has just heard that they will be holding an exclusive midnight showing of ‘Avengers: Infinity War’!! Create a new entry in the ‘movies’ table to reflect this.
+-- INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2019, '00:00');
+-- SELECT * FROM movies;
+
 -- The cinema would like to make the Iron Man movies a triple billing. Find out the show time of “Iron Man 2” and set the show time of “Iron Man 3” to start two hours later.
+-- SELECT show_time FROM movies WHERE title = 'Iron Man 2';
+-- UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
+-- SELECT * FROM movies;
+
 -- Extension
 -- Research how to delete multiple entries from your table in a single command.
+-- DELETE FROM movies WHERE title in ('Black Panther', 'Captain America: Civil War');
+-- SELECT * FROM movies;
